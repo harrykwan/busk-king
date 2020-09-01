@@ -112,7 +112,7 @@ function getsingername(singer, callback, pagenum) {
     try {
       const browser = await puppeteer.launch({headless: true,
       	args:[
-      		'no-sandbox','disable-setuid-sandbox'
+      		'--no-sandbox','--disable-setuid-sandbox'
       	]});
       const page = await browser.newPage();
 
@@ -147,7 +147,7 @@ function getsingersonglist(singer, callback, pagenum) {
     try {
       const browser = await puppeteer.launch({headless: true,
       	args:[
-      		'no-sandbox','disable-setuid-sandbox'
+      		'--no-sandbox','--disable-setuid-sandbox'
       	]});
       const page = await browser.newPage();
       // if (pagenum) {
@@ -191,7 +191,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
           await page.goto(link, {
@@ -216,7 +216,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
           await page.goto(link, {
@@ -241,7 +241,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
           await page.goto(link, {
@@ -267,7 +267,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
 
@@ -294,7 +294,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
           await page.goto(link, {
@@ -321,7 +321,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
           await page.goto(link, {
@@ -347,7 +347,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
           await page.goto(link, {
@@ -373,7 +373,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
           await page.goto(link, {
@@ -399,7 +399,7 @@ function getpage(link, callback) {
         try {
           const browser = await puppeteer.launch({headless: true,
           	args:[
-          		'no-sandbox','disable-setuid-sandbox'
+          		'--no-sandbox','--disable-setuid-sandbox'
           	]});
           const page = await browser.newPage();
           await page.goto(link, {
