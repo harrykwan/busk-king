@@ -3,19 +3,10 @@ var googleIt = require('google-it');
 const puppeteer = require('puppeteer');
 const log = require('simple-node-logger').createSimpleLogger('project.log');
 var app = express();
-const server = require('http').createServer();
-const io = require('socket.io')(server);
+
 const fs = require('fs');
 const updatesonglist = require('./updatesonglist.js')
 
-io.on('connection', (socket) => {
-  socket.emit('news', {
-    hello: 'world'
-  });
-  socket.on('my other event', (data) => {
-    console.log(data);
-  });
-});
 
 updatesonglist.start()
 // updatesonglist.getall()
@@ -206,8 +197,9 @@ function getpage(link, callback) {
           // console.log(pageresult.text);
           await browser.close();
           callback(pageresult.text)
-        } catch {
+        } catch(e) {
           callback('server error')
+          console.log(e)
         }
       })();
     } else if (link.indexOf('polygonguitar.blogspot.com') != -1) {
@@ -227,8 +219,9 @@ function getpage(link, callback) {
           // console.log(pageresult.text);
           await browser.close();
           callback(pageresult.text)
-        } catch {
+        } catch(e) {
           callback('server error')
+          console.log(e)
         }
       })();
     } else if (link.indexOf('daydayguitar.blogspot.com') != -1) {
@@ -248,8 +241,9 @@ function getpage(link, callback) {
           // console.log(pageresult.text);
           await browser.close();
           callback(pageresult.text)
-        } catch {
+        } catch(e) {
           callback('server error')
+          console.log(e)
         }
       })();
     } else if (link.indexOf('blog.xuite.net') != -1) {
@@ -272,8 +266,9 @@ function getpage(link, callback) {
           // console.log(pageresult.text);
           await browser.close();
           callback(pageresult.text)
-        } catch {
+        } catch(e) {
           callback('server error')
+          console.log(e)
         }
       })();
     } else if (link.indexOf('91pu.com') != -1) {
@@ -295,8 +290,9 @@ function getpage(link, callback) {
           // console.log(pageresult.text);
           await browser.close();
           callback(pageresult.text)
-        } catch {
+        } catch(e) {
           callback('server error')
+          console.log(e)
         }
       })();
     } else if (link.indexOf('tabs.ultimate-guitar.com') != -1) {
@@ -317,8 +313,9 @@ function getpage(link, callback) {
           // console.log(pageresult.text);
           await browser.close();
           callback(pageresult.text)
-        } catch {
+        } catch(e) {
           callback('server error')
+          console.log(e)
         }
       })();
     } else if (link.indexOf('chord4.com/tabs') != -1) {
@@ -339,8 +336,9 @@ function getpage(link, callback) {
           // console.log(pageresult.text);
           await browser.close();
           callback(pageresult.text)
-        } catch {
+        } catch(e) {
           callback('server error')
+          console.log(e)
         }
       })();
     } else if (link.indexOf('chords-and-tabs.net') != -1) {
@@ -361,8 +359,9 @@ function getpage(link, callback) {
           // console.log(pageresult.text);
           await browser.close();
           callback(pageresult.text)
-        } catch {
+        } catch(e) {
           callback('server error')
+          console.log(e)
         }
       })();
     } else if (link.indexOf('polygon.guitars') != -1) {
