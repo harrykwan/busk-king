@@ -110,7 +110,10 @@ app.get('/getallsonglist', function (req, res) {
 function getsingername(singer, callback, pagenum) {
   return (async () => {
     try {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({headless: true,
+      	args:[
+      		'no-sandbox','disable-setuid-sandbox'
+      	]});
       const page = await browser.newPage();
 
       await page.goto("https://www.kkbox.com/hk/en/search.php?search=artist&word=" + singer + "&sort=01&cur_page=" + pagenum, {
@@ -142,7 +145,10 @@ function getsingername(singer, callback, pagenum) {
 function getsingersonglist(singer, callback, pagenum) {
   return (async () => {
     try {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({headless: true,
+      	args:[
+      		'no-sandbox','disable-setuid-sandbox'
+      	]});
       const page = await browser.newPage();
       // if (pagenum) {
       //   await page.goto("https://www.kkbox.com/hk/en/search.php?search=song&word=" + singer + "&sort=01", {
@@ -183,7 +189,10 @@ function getpage(link, callback) {
     if (link.indexOf('guitarians.com/chord') != -1) {
       return (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
           await page.goto(link, {
             waitUntil: 'load'
@@ -205,7 +214,10 @@ function getpage(link, callback) {
     } else if (link.indexOf('polygonguitar.blogspot.com') != -1) {
       (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
           await page.goto(link, {
             waitUntil: 'load'
@@ -227,7 +239,10 @@ function getpage(link, callback) {
     } else if (link.indexOf('daydayguitar.blogspot.com') != -1) {
       (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
           await page.goto(link, {
             waitUntil: 'load'
@@ -250,7 +265,10 @@ function getpage(link, callback) {
       // return callback('not supported');
       (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
 
           await page.goto(link, {
@@ -274,7 +292,10 @@ function getpage(link, callback) {
     } else if (link.indexOf('91pu.com') != -1) {
       (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
           await page.goto(link, {
             waitUntil: 'load'
@@ -298,7 +319,10 @@ function getpage(link, callback) {
     } else if (link.indexOf('tabs.ultimate-guitar.com') != -1) {
       (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
           await page.goto(link, {
             waitUntil: 'load'
@@ -321,7 +345,10 @@ function getpage(link, callback) {
     } else if (link.indexOf('chord4.com/tabs') != -1) {
       (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
           await page.goto(link, {
             waitUntil: 'load'
@@ -344,7 +371,10 @@ function getpage(link, callback) {
     } else if (link.indexOf('chords-and-tabs.net') != -1) {
       (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
           await page.goto(link, {
             waitUntil: 'load'
@@ -367,7 +397,10 @@ function getpage(link, callback) {
     } else if (link.indexOf('polygon.guitars') != -1) {
       (async () => {
         try {
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({headless: true,
+          	args:[
+          		'no-sandbox','disable-setuid-sandbox'
+          	]});
           const page = await browser.newPage();
           await page.goto(link, {
             waitUntil: 'load'
